@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Bighome.css">
+    <title>Vintagewheelshome</title>
+</head>
+<body>
+    <div style="display: flex; align-items: center; padding: 10px; background-color: black; color: white; border-bottom: 2px solid #ffcc00;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwSzNt97EzWQC9pJBXPrmx-v5RJlTSP6zWSA&s" alt="Vintage Wheels Logo" style="height: 50px; margin-right: 10px;">
+        <span style="font-size: 1.2rem; font-style: italic;">"Driven by passion, fueled by History"</span>
+    </div>
+    <div id="html2" class="redbag">
+        <img src="c:\Users\ARFA\Pictures\Images of Cars\Capture.PNG" alt="used carsimg">
+      </div>
+     <br>
+      <div class="search-bar">
+        <form id="searchForm" onsubmit="return searchPage()">
+            <input type="text" id="searchInput" placeholder="NEW CARS/USED CARS" />
+            <button type="submit">Search</button>
+        </form>
+        </div>
+        <br>
+      <div class="centered-container">
+        <span class="word">All Used Cars</span>
+        <span class="word">All New Cars</span>
+      </div>
+      <script>
+            function searchPage() {
+            // Get user input
+            var query = document.getElementById("searchInput").value.trim().toLowerCase();
+
+            // Redirect based on the search term
+            if (query === " used cars"||query===" USED CARS") {
+                window.location.href = " usecarhome.html"; // Link to used car page
+            } else if (query === " NEW CARS"||query==="new cars") {
+                window.location.href = " newcarhome.html"; // Link to new car page
+            } 
+           else
+                {
+                alert("No results found. Please search for 'New cars' or 'Used cars'.");
+            }
+            return false; // Prevent default form submission
+        }
+            
+    </script>
+</body>
+</html>
